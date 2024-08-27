@@ -1,0 +1,158 @@
+from weasyprint import HTML
+
+# Updated HTML content with professional font style and size
+html_content_professional = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 12pt;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28pt;
+            font-weight: bold;
+        }
+        .header p {
+            margin: 5px 0;
+            font-size: 12pt;
+        }
+        .header .contact-info {
+            font-size: 10pt;
+        }
+        .header .contact-info a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+        .container {
+            padding: 30px 20px;
+        }
+        .section-title {
+            font-size: 18pt;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+        }
+        .section-content {
+            margin-bottom: 20px;
+        }
+        .section-content p {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+        a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            background-color: #f39c12;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Prem Singh Beniwal</h1>
+    <div class="contact-info">
+        <p>Mathura, India 281403 | 6396517421 | <a href="mailto:premchaudhary5657@gmail.com">premchaudhary5657@gmail.com</a></p>
+        <p><a href="https://www.linkedin.com/in/prem-singh-beniwal-619692323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn Profile</a></p>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="section">
+        <div class="section-title">Summary</div>
+        <div class="section-content">
+            <p>Highly motivated and skilled Web Developer with extensive experience in the <span class="highlight">MERN stack</span> (MongoDB, Express.js, React, Node.js). Proven ability to deliver robust and scalable web applications with a focus on performance, usability, and modern design principles. Adept at collaborating with cross-functional teams to achieve project goals and exceed client expectations.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Skills</div>
+        <div class="section-content">
+            <p>Front-End Development | JavaScript | CSS | HTML | RESTful APIs | Problem-Solving | React</p>
+            <p>Node.js | Express.js | MongoDB | C | Team Leading | Redux</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Experience</div>
+        <div class="section-content">
+            <p><strong>Intern</strong> | VerveBridge - IN | March 2024 - April 2024</p>
+            <p>Worked on various MERN stack projects, gaining hands-on experience in both frontend and backend development. Assisted in the development and maintenance of web applications, including bug fixing and feature enhancements. Ensured application responsiveness and user-friendliness, integrating modern design patterns and optimizing performance.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Education and Training</div>
+        <div class="section-content">
+            <p><strong>BCA in Computer Science</strong> | Sanskriti University, Chhata, Mathura, UP | May 2022</p>
+            <p><strong>High School Diploma</strong> | Jindal Public School, Kosikalan, Chhata, Mathura (281403) | March 2021</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Languages</div>
+        <div class="section-content">
+            <p>Hindi (First Language) | English (A1 - Beginner)</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Personal</div>
+        <div class="section-content">
+            <p>Languages: Hindi, English | Availability: Immediate | Willingness to Relocate: Yes</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Activities and Hobbies</div>
+        <div class="section-content">
+            <p><strong>Coding and Open Source Contribution:</strong> Passionate about coding and frequently contribute to open-source projects on GitHub. Enjoy experimenting with new technologies and frameworks, staying up-to-date with the latest industry trends.</p>
+            <p><strong>Tech Blogging:</strong> Write technical blogs on web development, JavaScript frameworks, and other programming topics, aiming to share knowledge and engage with the developer community.</p>
+            <p><strong>Problem Solving and Competitive Programming:</strong> Actively participate in coding challenges and competitions on platforms like LeetCode and HackerRank to sharpen problem-solving skills and learn new algorithms.</p>
+            <p><strong>Gaming:</strong> Enjoy playing strategy and puzzle games, which enhance logical thinking and provide a fun way to relax after work.</p>
+            <p><strong>Reading:</strong> Regularly read books and articles on technology, productivity, and self-improvement to continually develop both professionally and personally.</p>
+            <p><strong>Fitness and Outdoor Activities:</strong> Engage in regular exercise, hiking, and cycling to maintain physical health and clear the mind.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">References</div>
+        <div class="section-content">
+            <p>References available upon request.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+"""
+
+# Generating the updated professional PDF resume
+pdf_output_path_professional = "/mnt/data/Pawan_Beniwal_Professional_Resume.pdf"
+HTML(string=html_content_professional).write_pdf(pdf_output_path_professional)
+
+pdf_output_path_professional

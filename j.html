@@ -1,0 +1,59 @@
+<!-- 1. grid-template-columns
+This property defines the number and width of columns in your grid layout.
+
+Syntax: grid-template-columns: <track-size> <track-size> ...;
+Example: grid-template-columns: 100px 200px 1fr; creates three columns: the first is 100px wide, the second is 200px, and the third takes up the remaining space in the grid container.
+2. grid-template-rows
+This property defines the number and height of rows in your grid layout.
+
+Syntax: grid-template-rows: <track-size> <track-size> ...;
+Example: grid-template-rows: 150px auto; creates two rows: the first is 150px tall, and the second takes up the remaining height.
+3. justify-content
+This property aligns the grid items along the horizontal axis within the grid container.
+
+Options: start, end, center, stretch, space-around, space-between, space-evenly.
+Example: justify-content: center; centers the grid items horizontally within the grid container.
+4. align-content
+This property aligns the grid items along the vertical axis within the grid container.
+
+Options: start, end, center, stretch, space-around, space-between, space-evenly.
+Example: align-content: space-between; distributes the grid items with space between them vertically within the grid container -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout Example</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 100px 200px 1fr; /* Defines 3 columns with different widths */
+            grid-template-rows: 150px auto; /* Defines 2 rows with different heights */
+            gap: 10px; /* Gap between grid items */
+            justify-content: center; /* Centers grid items horizontally within the container */
+            align-content: space-between; /* Distributes grid items with space between them vertically */
+            height: 400px; /* Fixed height to see the align-content effect */
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .box {
+            background-color: lightblue;
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Item 1</div>
+        <div class="box">Item 2</div>
+        <div class="box">Item 3</div>
+        <div class="box">Item 4</div>
+        <div class="box">Item 5</div>
+        <div class="box">Item 6</div>
+    </div>
+</body>
+</html>

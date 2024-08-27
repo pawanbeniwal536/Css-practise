@@ -1,0 +1,105 @@
+<!-- Use of the css positions like static , relative , absolute , fixed , sticky  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning</title>
+    <style>
+        .container {
+            height: 400vh; /* To make scrolling possible */
+            background-color: red;
+            padding: 20px;
+        }
+
+        /* Static positioning (default) */
+        .child-static {
+            background-color: lightblue;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        /* Relative positioning */
+        .child-relative {
+            background-color: lightgreen;
+            position: relative;
+            top: 20px; /* Moves 20px down from its original position */
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        /* Absolute positioning */
+        .child-absolute {
+            background-color: lightcoral;
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            left: 50px;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        /* Fixed positioning */
+        .child-fixed {
+            background-color: lightsalmon;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        /* Sticky positioning */
+        .child-sticky {
+            background-color: lightgoldenrodyellow;
+            position: sticky;
+            top: 0; /* Sticks to the top of the viewport when scrolled */
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Static positioning -->
+        <div class="child-static">
+            Static Position (Default)
+        </div>
+
+        <!-- Relative positioning -->
+        <div class="child-relative">
+            Relative Position
+        </div>
+
+        <!-- Absolute positioning -->
+        <div class="child-absolute">
+            Absolute Position
+        </div>
+
+        <!-- Sticky positioning -->
+        <div class="child-sticky">
+            Sticky Position
+        </div>
+
+        <!-- Fixed positioning -->
+        <div class="child-fixed">
+            Fixed Position
+        </div>
+    </div>
+</body>
+</html>
+<!-- Static Position (.child-static): This is the default position. The element is positioned according to the normal document flow.
+
+Relative Position (.child-relative): The element is positioned relative to its normal position. In this example, it moves 20px down from where it would normally be.
+
+Absolute Position (.child-absolute): The element is positioned relative to its nearest positioned ancestor (an ancestor with a position other than static). If no such ancestor exists, it uses the document body, and moves according to the specified top, right, bottom, or left properties.
+
+Fixed Position (.child-fixed): The element is positioned relative to the viewport, meaning it stays in the same place even when the page is scrolled.
+
+Sticky Position (.child-sticky): The element is treated as relative until it reaches a specific point, at which it becomes fixed. In this case, it will stick to the top of the viewport when you scroll down. -->

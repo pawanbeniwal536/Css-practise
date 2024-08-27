@@ -1,0 +1,71 @@
+<!-- Example use of the transition , transform , animations -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform, Transition, and Animation Example</title>
+    <style>
+        /* Basic styles for the container and box */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 10px;
+
+            /* Initial transform to scale and skew */
+            transform: scale(1) skew(0deg, 0deg);
+
+            /* Transition for smooth transformation */
+            transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        /* Hover effect to apply transformation */
+        .box:hover {
+            transform: scale(1.2) rotate(15deg) translate(20px, 20px);
+            background-color: lightcoral;
+        }
+
+        /* Animation example */
+        .box {
+            animation: moveAndFade 5s infinite alternate ease-in-out;
+        }
+
+        /* Keyframes for the animation */
+        @keyframes moveAndFade {
+            0% {
+                transform: translateX(0) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(100px) rotate(180deg) scale(1.5);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateX(0) rotate(360deg) scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Hover Me</div>
+    </div>
+</body>
+</html>

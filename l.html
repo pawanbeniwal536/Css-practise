@@ -1,0 +1,90 @@
+<!-- Example use of the transition , transform , animations -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Transform, Transition, and Animation Design</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .card {
+            width: 300px;
+            height: 400px;
+            perspective: 1000px; /* Creates the 3D effect */
+        }
+
+        .inner-card {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff6b6b, #f0e130, #6a0572);
+            border-radius: 15px;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease;
+            transform-style: preserve-3d; /* Ensures the 3D effect is maintained */
+            animation: colorChange 5s infinite alternate; /* Infinite color change animation */
+        }
+
+        .card:hover .inner-card {
+            transform: rotateY(180deg); /* Flips the card on hover */
+        }
+
+        .card .front, .card .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden; /* Hides the back when not visible */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .card .front {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .card .back {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: rotateY(180deg); /* Initially hides the back side */
+        }
+
+        @keyframes colorChange {
+            0% {
+                background: linear-gradient(45deg, #ff6b6b, #f0e130, #6a0572);
+            }
+            50% {
+                background: linear-gradient(45deg, #34ace0, #ff5252, #ffeaa7);
+            }
+            100% {
+                background: linear-gradient(45deg, #00b894, #fd79a8, #636e72);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="inner-card">
+            <div class="front">
+                FRONT SIDE
+            </div>
+            <div class="back">
+                BACK SIDE
+            </div>
+        </div>
+    </div>
+</body>
+</html>

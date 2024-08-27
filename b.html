@@ -1,0 +1,60 @@
+<!-- use of the float left and float right and clear properties -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Float Example</title>
+    <style>
+        .container {
+            background-color: lightgray;
+            padding: 10px;
+            overflow: auto;
+        }
+
+        /* Floated elements */
+        .box-left {
+            float: left;
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin-right: 10px;
+        }
+
+        .box-right {
+            float: right;
+            width: 200px;
+            height: 100px;
+            background-color: lightgreen;
+            margin-left: 10px;
+        }
+
+        /* Clearfix method */
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+     /* Another content after the floated elements  */
+        .content {
+            background-color: lightcoral;
+            padding: 20px;
+            margin-top: 10px;
+        }
+            
+    </style>
+</head>
+
+<body>
+    <div class="container clearfix">
+        <div class="box-left">Float Left</div>
+        <div class="box-right">Float Right</div>
+    </div>
+
+    <div class="content">
+        This content is placed after the floated elements and should appear below them.
+    </div>
+</body>
+</html>
